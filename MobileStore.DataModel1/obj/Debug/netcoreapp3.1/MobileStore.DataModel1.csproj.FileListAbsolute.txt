@@ -1,0 +1,5 @@
+D:\web\MobileStore.DataModel1\obj\Debug\netcoreapp3.1\MobileStore.DataModel1.csproj.AssemblyReference.cache
+D:\web\MobileStore.DataModel1\obj\Debug\netcoreapp3.1\MobileStore.DataModel1.GeneratedMSBuildEditorConfig.editorconfig
+D:\web\MobileStore.DataModel1\obj\Debug\netcoreapp3.1\MobileStore.DataModel1.AssemblyInfoInputs.cache
+D:\web\MobileStore.DataModel1\obj\Debug\netcoreapp3.1\MobileStore.DataModel1.AssemblyInfo.cs
+D:\web\MobileStore.DataModel1\obj\Debug\netcoreapp3.1\MobileStore.DataModel1.csproj.CoreCompileInputs.cache

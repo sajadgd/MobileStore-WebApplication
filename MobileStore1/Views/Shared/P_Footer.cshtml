@@ -1,0 +1,110 @@
+﻿@inject MobileStore1.CommandLayer1.Services.IUnitOfWork _IUOW
+
+<footer class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="footer-about">
+                    @{ 
+                        var mod = _IUOW.SettingsUW.Get().FirstOrDefault();
+                    }
+                    <h3><i>درباره </i> ما</h3>
+                    <p> @mod.Settings_About </p>
+                    <ul>
+                        <li><span><i class="fa fa-mobile"></i></span><p>تلفن :   @mod.Settings_Tel</p><p>فکس :        @mod.Settings_Fax</p></li>
+                        <li><span><i class="fa fa-envelope-o"></i></span><p>ایمیل :       @mod.Settings_Email</p><p>آدرس :    @mod.Settings_Address</p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="footer-product">
+                    <h3><i>آخرین </i> محصولات</h3>
+                    <span><img src="~/SiteContent/images/footer-product.jpg" alt="" /></span>
+                    <h4><a href="#" title="">عنوان محصول</a></h4>
+                    <p>توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. </p>
+                    <ul>
+                        <li><a href="#" title=""><i class="fa fa-shopping-cart"></i></a></li>
+                        <li><a href="#" title=""><i class="fa fa-heart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="footer-post">
+                    <h3><i>مطالب </i> وبلاگ</h3>
+                    <ul>
+                        <li><a href="#" title="">عنوان مطلب را در اینجا بنویسید</a><i>25 شهریور 1392</i></li>
+                        <li><a href="#" title="">عنوان مطلب را در اینجا بنویسید</a><i>25 شهریور 1392</i></li>
+                        <li><a href="#" title="">عنوان مطلب را در اینجا بنویسید</a><i>25 شهریور 1392</i></li>
+                        <li><a href="#" title="">عنوان مطلب را در اینجا بنویسید</a><i>25 شهریور 1392</i></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <h3><i>آخرین </i> فروش ها</h3>
+                <div class="footer-deal">
+                    <div class="footer-deals">
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal.jpg" alt="" /><span>30% <i> تخفیف</i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal2.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal3.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal4.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal5.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal6.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                    </div>
+
+                    <div class="footer-deals">
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal.jpg" alt="" /><span>30% <i> تخفیف</i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal2.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal3.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal4.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal5.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal6.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                    </div>
+
+                    <div class="footer-deals">
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal.jpg" alt="" /><span>30% <i> تخفیف</i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal2.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal3.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal4.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal5.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                        <a href="#" title=""><img src="~/SiteContent/images/footer-deal6.jpg" alt="" /><span>30% <i> تخفیف </i></span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<div class="bottom-line">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="payment-accept">
+                    <span></span>
+                    <ul>
+                        <li><a href="#" title=""><img src="~/SiteContent/images/payment1.png" alt="" /></a></li>
+                        <li><a href="#" title=""><img src="~/SiteContent/images/payment2.png" alt="" /></a></li>
+                        <li><a href="#" title=""><img src="~/SiteContent/images/payment3.png" alt="" /></a></li>
+                        <li><a href="#" title=""><img src="~/SiteContent/images/payment4.png" alt="" /></a></li>
+                        <li><a href="#" title=""><img src="~/SiteContent/images/payment5.png" alt="" /></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <ul class="bottom-menu">
+                    <li><a href="#" title="">سبد خرید</a></li>
+                    <li><a href="#" title="">پرداخت</a></li>
+                    <li><a href="#" title="">پنل کاربری</a></li>
+                    <li><a href="#" title="">تماس با ما</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <span>فارسی سازی شده توسط <a href="http://www.monstertemplate.ir"> هیولای قالب های آماده وب سایت</a></span>
+</div>

@@ -1,0 +1,31 @@
+﻿@model MobileStore.CommandLayer1.ViewModel.HomeViewModel
+
+@{
+    ViewData["Title"] = "فروشگاه موبایل";
+}
+
+<section class="block">
+    <div class="container">
+        <div class="row">
+            <partial name="P_SlideShow" model="@Model.ListSlider" />
+            <partial name="P_TheBest" model="@Model.Inexpensive" />
+        </div>
+    </div>
+</section>
+
+<partial name="P_TopPaid" model="@Model.BestSellingProduct"/>
+<partial name="P_LatestProducts" model="@Model.ProductNew"/>
+<partial name="P_NewBrands" />
+<partial name="P_NewPhones" />
+
+
+
+
+
+
+
+
+
+
+
+

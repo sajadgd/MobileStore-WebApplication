@@ -1,0 +1,141 @@
+﻿@inject MobileStore1.CommandLayer1.Services.IUnitOfWork _IUOW
+
+<header class="header1">
+    <div class="container">
+        <div class="top-bar">
+
+            @{
+                if (User.Identity.IsAuthenticated)
+                {
+                    <ul class="shop-cart bar-dropdown">
+                        <li>
+                            <a href="#" title=""><i class="fa fa-shopping-cart"></i></a>
+                            <ul>
+                                <li>
+                                    <span><img src="~/SiteContent/images/cart1.jpg" alt="" /></span>
+                                    <a href="#" title="">تی شرت - 2013</a>
+                                    <i>36000 تومان</i>
+                                    <div class="cart-bar-hover">
+                                        <ul>
+                                            <li><a href="#" title=""><i class="fa fa-cog"></i></a></li>
+                                            <li><a href="#" title=""><i class="fa fa-trash-o"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span><img src="~/SiteContent/images/cart2.jpg" alt="" /></span>
+                                    <a href="#" title="">کفش جدید - تی پین</a>
+                                    <i>56000 تومان</i>
+                                    <div class="cart-bar-hover">
+                                        <ul>
+                                            <li><a href="#" title=""><i class="fa fa-cog"></i></a></li>
+                                            <li><a href="#" title=""><i class="fa fa-trash-o"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <span><img src="~/SiteContent/images/cart3.jpg" alt="" /></span>
+                                    <a href="#" title="">شلوار کتان</a>
+                                    <i style="direction:rtl;">56000 تومان</i>
+                                    <div class="cart-bar-hover">
+                                        <ul>
+                                            <li><a href="#" title=""><i class="fa fa-cog"></i></a></li>
+                                            <li><a href="#" title=""><i class="fa fa-trash-o"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <h6>جمع: 99000 تومان</h6>
+                                    <a href="#" title="" class="checkout-btn">پرداخت</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="compare-btn bar-dropdown">
+                        <li><a href="#"><i class="fa fa-inbox"></i>خروج</a></li>
+                    </ul>
+
+                    <ul class="compare-btn bar-dropdown">
+                        <li><a href="#"><i class="fa fa-inbox"></i>پنل کاربری</a></li>
+                    </ul>
+                }
+                else
+                {
+                    <ul class="compare-btn bar-dropdown">
+                        <li><a asp-area="Identity" asp-page="/Account/Register"><i class="fa fa-inbox"></i>ثبت نام</a></li>
+                    </ul>
+
+
+                    <ul class="whishlist-bar bar-dropdown">
+                        <li><a asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-inbox"></i>ورود به سایت</a></li>
+                    </ul>
+                }
+            }
+
+
+            <span><i class="fa fa-mobile"></i>پشتیبانی : 123-456-7890</span>
+        </div>
+    </div>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="./index.html" title="">
+                    <img src="~/SiteContent/images/logo.png" alt="" />
+                </a>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    @{
+                        foreach (var item in _IUOW.CategoriesUW.Get(m => m.CategoriesParentId.Equals(0)).ToList())
+                        {
+                            <li>
+                                <a href="#" title="">@item.CategoriesTitle</a>
+                                <ul>
+                                    @{
+                                        foreach (var item1 in _IUOW.CategoriesUW.Get(m => m.CategoriesParentId.Equals(item.CategoriesID)).ToList())
+                                        {
+                                            <li>
+                                                <a href="./index.html" title="">@item1.CategoriesTitle</a>
+                                                <ul>
+                                                    @{
+                                                        foreach (var item2 in _IUOW.MenuUW.Get(m => m.CateId.Equals(item1.CategoriesID)).ToList())
+                                                        {
+                                                            <li>
+                                                                <a href="#">@item2.MenuTitle</a>
+                                                                <ul>
+                                                                    @{
+                                                                        foreach (var item3 in _IUOW.ProductUW.Get(p => p.Product_MenuId.Equals(item2.MenuID)).ToList())
+                                                                        {
+                                                                            <li>
+                                                                                <a href="#">@item3.Product_ProName</a>
+                                                                            </li>
+                                                                        }
+                                                                    }
+                                                                </ul>
+                                                            </li>
+                                                        }
+                                                    }
+
+                                                </ul>
+                                            </li>
+                                        }
+                                    }
+
+                                </ul>
+                            </li>
+                        }
+                    }
+
+                </ul>
+            </div>
+
+            <div class="search-header">
+                <form><input type="text" placeholder="جستجو" /><a href="#" title=""><i class="fa fa-search"></i></a></form>
+            </div>
+        </div>
+    </nav>
+</header>

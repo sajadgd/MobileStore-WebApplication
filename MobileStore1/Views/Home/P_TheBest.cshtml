@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MobileStore.CommandLayer1.ViewModel.InexpensiveViewModel>
+
+<div class="col-md-4">
+    <div class="best-deals">
+        <span>تخفیف های مناسبتی</span>
+        <ul>
+            @{
+                if (Model.Count() > 0)
+                {
+                    foreach (var item in Model)
+                    {
+                        ViewBag.MablaghBaTakhfif = item.Mablagh - (item.Mablagh * (item.DarsadTakhfif / 100));
+                        <li style="background-color:#fbf9f9;padding:5px;">
+                            <span><img src="/Images/Product/@item.IndexImage" alt="@item.NameFa" style="width:120px; height:120px;"/></span>
+                            <h4 style="margin-top:10px;font-weight:bold;font-size:16px;">@item.NameFa</h4>
+                            <p>@string.Format("{0:###,###,###}" ,@item.Mablagh)<strong></strong></p>
+                            <p>@item.DarsadTakhfif%</p>
+                            <p>@string.Format("{0:###,###,###}",ViewBag.MablaghBaTakhfif)</p>
+                            <a href="#" title="">خرید</a>
+                        </li>
+                    }
+                }
+                else
+                {
+                    <li>
+                        <span><img src="/Images/Noimg.jpg" alt="" /></span>
+                        <h4>عنوان خود را بنویسید</h4>
+                        <p>45000 تومان<strong></strong></p>
+                        <a href="#" title="">خرید</a>
+                    </li>
+
+                    <li>
+                        <span><img src="/Images/Noimg.jpg" alt="" /></span>
+                        <h4>عنوان خود را بنویسید</h4>
+                        <p>45000 تومان<strong></strong></p>
+                        <a href="#" title="">خرید</a>
+                    </li>
+                }
+            }
+
+
+        </ul>
+    </div>
+</div>

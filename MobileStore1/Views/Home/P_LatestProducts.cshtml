@@ -1,0 +1,124 @@
+﻿@model IEnumerable<MobileStore.CommandLayer1.ViewModel.InexpensiveViewModel>
+
+<section class="block remove-gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="heading1">
+                    <h2><i>جدیدترین  </i>محصولات</h2>
+                    <span>برای هر سلیقه و هر بودجه</span>
+                </div>
+                <div class="row">
+                    @{if (Model.Count() > 0)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <div class="col-md-6">
+                                    <div class="best-seller most-sold">
+                                        <div class="sold-thumb">
+                                            <img alt="" src="/Images/Product/@item.IndexImage" /><a asp-controller="Product" asp-action="ProductDetail" asp-route-Id="@item.Id" title="">جزئیات</a>
+                                            <i class="box1"></i>
+                                            <i class="box2"></i>
+                                            <i class="box3"></i>
+                                            <i class="box4"></i>
+                                        </div>
+                                        <h3>@item.NameFa</h3>
+
+                                        <ul class="tooltip-btn">
+                                            <li class="cart"><a href="#" title=""><i class="fa fa-heart"></i></a></li>
+                                            <li class="shop"><a href="#" title=""><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                        <a asp-controller="Product" asp-action="ProductDetail" asp-route-Id="@item.Id" title="">جزئیات</a>
+                                        <span><i>36000 تومان</i>@item.Mablagh تومان</span>
+                                    </div>
+                                </div>
+                            }
+
+                        } }
+                </div>
+            </div>
+
+            <div class="shop-tabs">
+                <div class="col-md-6">
+                    <ul class="nav nav-tabs shop-tab" id="myTab">
+                        <li class="active"><a data-toggle="tab" href="#tab-photos">عکس ها</a></li>
+                        <li class=""><a data-toggle="tab" href="#reviews">آخرین اخبار</a></li>
+                        <li class=""><a data-toggle="tab" href="#video">ویدئو</a></li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+
+                        <div id="tab-photos" class="tab-pane fade active in">
+                            <div class="tab-photos">
+                                <div class="tab-photo-sec">
+                                    <div class="tab-photo">
+                                        <img src="~/SiteContent/images/tab-photo1.jpg" alt="" />
+                                        <span>عنوان مطلب را بنویسید</span>
+                                    </div>
+                                    <div class="tab-photo-des">
+                                        <p>توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. </p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-photo-sec">
+                                    <div class="tab-photo">
+                                        <img src="~/SiteContent/images/tab-photo2.jpg" alt="" />
+                                        <span>عنوان مطلب را بنویسید</span>
+                                    </div>
+                                    <div class="tab-photo-des">
+                                        <p>توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. </p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-photo-sec">
+                                    <div class="tab-photo">
+                                        <img src="~/SiteContent/images/tab-photo3.jpg" alt="" />
+                                        <span>عنوان مطلب را بنویسید</span>
+                                    </div>
+                                    <div class="tab-photo-des">
+                                        <p>توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="reviews" class="tab-pane fade">
+                            <div class="tab-reveiws">
+                                <ul>
+                                    <li>
+                                        <span><img src="~/SiteContent/images/reviews1.jpg" alt="" /></span>
+                                        <a href="#" title="">عنوان مطلب را بنویسید. عنوان مطلب را بنویسید</a>
+                                        <i> 25 شهریور 1392</i>
+                                        <p>توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. </p>
+                                    </li>
+
+                                    <li>
+                                        <span><img src="~/SiteContent/images/reviews2.jpg" alt="" /></span>
+                                        <a href="#" title="">عنوان مطلب را بنویسید. عنوان مطلب را بنویسید</a>
+                                        <i> 25 شهریور 1392</i>
+                                        <p>توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. </p>
+                                    </li>
+
+                                    <li>
+                                        <span><img src="~/SiteContent/images/reviews3.jpg" alt="" /></span>
+                                        <a href="#" title="">عنوان مطلب را بنویسید. عنوان مطلب را بنویسید</a>
+                                        <i> 25 شهریور 1392</i>
+                                        <p>توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="video" class="tab-pane fade">
+                            <div class="tab-video">
+                                <h3>عنوان خود را می توانید در این قسمت بنویسید</h3>
+                                <iframe src="../../player.vimeo.com/video/8118831.html" height="281"></iframe>
+                                <p>توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. توضیحات خود را در این قسمت بنویسید. </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

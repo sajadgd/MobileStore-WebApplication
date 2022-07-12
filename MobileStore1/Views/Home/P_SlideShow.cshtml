@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MobileStore.DataModelLayer1.Models.SliderEntity>
+
+
+<div class="col-md-8">
+    <div class="tp-banner-container">
+        <div class="tp-banner">
+            <ul>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <li data-transition="3dcurtain-vertical" data-slotamount="7" data-masterspeed="500">
+                            <img src="~/Images/SliderImages/@item.SliderImage" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
+                        </li><!-- SLIDE 1  -->
+                    }
+                }
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+

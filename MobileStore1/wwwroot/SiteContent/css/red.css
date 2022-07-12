@@ -1,0 +1,141 @@
+
+/* Background - Color */
+.shop-cart.bar-dropdown > li > a,
+.shop-product-thumb > a,
+.shop-recent-product ul li a,
+.shop-recent-product > p,
+.deal-week > h2 > span,
+.deal-of-weak > a,
+.heading-5 h2 i,
+.heading-5:before,
+.categories-widget ul li i,
+.custom-pagination > ul > li > a:hover,
+.custom-pagination > a > span:hover,
+.book-details > a,
+.sortable-btn > ul > li > a.active,
+.sortable-btn > ul > li > a:hover,
+.grid-product > .view-post,
+.our-skills-sec > ul > li > i,
+.our-skills-sec > ul > li > .progress .progress-bar,
+.cart-head,
+.cart-thumb > a,
+.cart-product > a > span,
+.cart-quanity > .decrements form input[type="button"],
+.cart-total-box > ul > li a,
+.review-users > ul > li > a:hover,
+.error-page > form > .submit,
+.error-page > ul > li > a:hover,
+.price-table:hover .price-head,
+.price-table:hover .price-footer,
+.best-seller.seller3 > a,
+.w-sales > span,
+.w-best-seller > div i,
+.mega-menu .menu-btn,
+.menu-dropdown-btn,
+.responsive-menu > ul > li > ul:before
+
+{
+
+	background: #b61515;	
+}
+
+
+
+/* Text Color */
+.menu > ul > li:hover > a,
+.shop-cart.bar-dropdown > li > ul > li > i,
+.shop-cart.bar-dropdown li > ul > li .checkout-btn,
+.slide4-text1 > i,
+.shop-categories > a,
+.shop-products:hover p,
+.w-ceo > h5,
+.latest-categories > ul > li:hover p, .latest-categories > ul > li:hover i,
+.latest-deal > h3 i,
+.sky-tabs > input:checked + label span span,
+.best-seller > span,
+#brands > .container > span i,
+.tab-reveiws li a:hover,
+.discount-desc h4 strong,
+.discount-desc h4 i,
+.excerpts > h2 > i,
+.excerpts > ul > li > span,
+.w-get-help > ul > li:hover h3,
+.w-get-help ul li p i,
+.w-get-help ul li > i,
+.w-get-help ul li ul li:hover p, .w-get-help ul li ul li:hover i,
+.w-get-help > ul > li:hover span,
+.title-head > h2 > i,
+.cart-detals > h5,
+.review-author > h3,
+.about-the-author > a,
+.error-page > h2 > i,
+.menu.style2 > ul > li > a > i,
+.single-post-head > h3 > i,
+.menu > ul > li ul.mega-menu .menu-offers > span,
+.price-table:hover .price-head > i,
+.price-table:hover .price-footer > a,
+.heading4 > h2 i,
+.shop-products:hover h3
+
+
+
+{
+	color: #b61515;
+
+}
+
+
+
+
+/* Border-color */
+.shop-cart.bar-dropdown li > ul > li .checkout-btn,
+.shop-recent-product ul li a,
+.heading-5 h2,
+.custom-pagination > ul > li > a:hover,
+.custom-pagination > a > span:hover,
+.w-get-help > ul > li:hover span,
+.add-cart-sec > ul > li,
+.cart-total-box > ul,
+.review-users > ul > li > a:hover,
+.error-page > form > .submit,
+.error-page > ul > li > a:hover,
+.menu > ul > li ul.mega-menu,
+.responsive-menu > ul > li > ul
+
+{
+	border-color: #b61515;
+
+}
+
+
+
+
+
+
+
+/* Opacity Color */
+
+
+
+
+/* Custom */
+
+.header1 > nav{
+	border-bottom-color:#b61515; 
+
+}
+.header1 .menu > ul > li > ul:before,
+.menu > ul > li > ul
+{
+	border-top-color: #b61515;
+
+}
+.cart-bar-hover,
+.our-shop-thumb > span{
+	background: rgba(182,21,21,0.9);
+
+}
+.about-the-author{
+	border-left-color:  #b61515;	
+
+}

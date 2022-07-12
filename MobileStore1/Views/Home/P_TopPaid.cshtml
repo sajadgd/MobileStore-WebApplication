@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MobileStore.CommandLayer1.ViewModel.InexpensiveViewModel>
+<section class="block remove-gap">
+    <div class="container">
+        <div class="heading1">
+            <h2><i>پر فروش ترین			</i>محصولات</h2>
+            <span>برای هر سلیقه و هر بودجه</span>
+        </div>
+        <div id="most-solded">
+            <div class="row">
+                @{
+                    foreach (var item in Model)
+                    {
+                        <div class="col-md-3">
+                            <div class="best-seller most-sold">
+                                <div class="sold-thumb">
+                                    <img alt="" src="~/Images/Product/@item.IndexImage" /><a href="./single-post.html" title="">جزئیات</a>
+                                    <i class="box1"></i>
+                                    <i class="box2"></i>
+                                    <i class="box3"></i>
+                                    <i class="box4"></i>
+                                </div>
+                                <h3>@item.NameFa</h3>
+
+                                <ul class="tooltip-btn">
+                                    <li class="cart"><a href="#" title=""><i class="fa fa-heart"></i></a></li>
+                                    <li class="shop"><a href="#" title=""><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                                <a href="#" title="">جزئیات</a>
+                                <h6>جدید</h6>
+                                <span><i>36000 تومان</i>@item.Mablagh تومان</span>
+                            </div>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+
+    </div>
+</section>

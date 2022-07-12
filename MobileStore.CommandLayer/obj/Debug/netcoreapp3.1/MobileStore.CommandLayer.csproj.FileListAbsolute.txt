@@ -1,0 +1,5 @@
+D:\web\MobileStore.CommandLayer\obj\Debug\netcoreapp3.1\MobileStore.CommandLayer.csproj.AssemblyReference.cache
+D:\web\MobileStore.CommandLayer\obj\Debug\netcoreapp3.1\MobileStore.CommandLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\web\MobileStore.CommandLayer\obj\Debug\netcoreapp3.1\MobileStore.CommandLayer.AssemblyInfoInputs.cache
+D:\web\MobileStore.CommandLayer\obj\Debug\netcoreapp3.1\MobileStore.CommandLayer.AssemblyInfo.cs
+D:\web\MobileStore.CommandLayer\obj\Debug\netcoreapp3.1\MobileStore.CommandLayer.csproj.CoreCompileInputs.cache

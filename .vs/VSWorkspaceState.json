@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MobileStore.CommandLayer",
+    "\\MobileStore.CommandLayer\\ViewModel",
+    "\\MobileStore.CommandLayer\\ViewModel\\Site",
+    "\\MobileStore1"
+  ],
+  "SelectedNode": "\\MobileStore.CommandLayer\\ViewModel\\Site\\HomeViewModel.cs",
+  "PreviewInSolutionExplorer": false
+}

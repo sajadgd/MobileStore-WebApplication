@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <meta name="description" content="@ViewData["metakey"]" />
+    <meta name="keywords" content="@ViewData["metadesc"]" />
+
+
+    <link href='../../fonts.googleapis.com/css_10a75bc4.css' rel='stylesheet' type='text/css' />
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="~/SiteContent/css/bootstrap.min.css" type="text/css" /><!-- Bootstrap -->
+    <link rel="stylesheet" href="~/SiteContent/font-awesome/css/font-awesome.css" type="text/css" /><!-- Font Awesome -->
+    <link rel="stylesheet" href="~/SiteContent/css/owl.carousel.css" type="text/css" /><!-- Owl Carousal -->
+    <link rel="stylesheet" href="~/SiteContent/css/animate.css" type="text/css" /><!-- Animation -->
+
+
+
+    <link rel="stylesheet" href="~/SiteContent/css/style.css" type="text/css" /><!-- Style -->
+    <link rel="stylesheet" href="~/SiteContent/css/responsive.css" type="text/css" /><!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="~/SiteContent/css/revolution.css" media="screen" /> <!-- Slider Revolution -->
+    <link rel="alternate stylesheet " type="text/css" href="~/SiteContent/css/purple.css" title="purple" /> <!-- Purple -->
+    <link rel="alternate stylesheet" type="text/css" href="~/SiteContent/css/green.css" title="green" /> <!-- Green -->
+    <link rel="alternate stylesheet" type="text/css" href="~/SiteContent/css/orange.css" title="orange" /> <!-- Orange -->
+    <link rel="alternate stylesheet" type="text/css" href="~/SiteContent/css/cyan.css" title="cyan" /> <!-- Cyan -->
+    <link rel="alternate stylesheet" type="text/css" href="~/SiteContent/css/red.css" title="red" /> <!-- Red -->
+    <link rel="alternate stylesheet" type="text/css" href="~/SiteContent/css/black.css" title="black" /> <!-- Black -->
+    <link rel="alternate stylesheet" type="text/css" href="~/SiteContent/css/pink.css" title="pink" /> <!-- Pink -->
+    <link rel="alternate stylesheet" type="text/css" href="~/SiteContent/css/gray.css" title="gray" /> <!-- Gray -->
+    <link rel="alternate stylesheet" type="text/css" href="~/SiteContent/css/grunge.css" title="grunge" /> <!-- Grunge -->
+    <link rel="alternate stylesheet" type="text/css" href="~/SiteContent/css/brown.css" title="brown" /> <!-- Brown -->
+
+</head>
+<body>
+
+    <partial name="P_Header" />
+
+    <partial name="P_HeaderMobile" />
+
+
+    <div class="theme-layout">
+            @RenderBody()
+    </div>
+
+    <partial name="P_Footer" />
+
+    <!-- Script -->
+    <script src="~/SiteContent/js/jquery-1.10.2.js"></script><!-- Jquery -->
+    <script src="~/SiteContent/js/script.js"></script><!-- Common -->
+    <script type="text/javascript" src="~/SiteContent/js/bootstrap.min.js"></script><!-- Bootstrap -->
+    <script type="text/javascript" src="~/SiteContent/js/modernizr.js"></script><!-- modernizr -->
+    <script type="text/javascript" src="~/SiteContent/js/owl.carousel.min.js"></script><!-- Owl Carousal -->
+    <script type="text/javascript" src="~/SiteContent/js/onscreen.js"></script><!-- On Screen -->
+    <script type="text/javascript" src="~/SiteContent/js/switcher.js"></script><!-- Style Switcher -->
+    <!-- SLIDER REVOLUTION -->
+    <script type="text/javascript" src="~/SiteContent/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="~/SiteContent/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script type="text/javascript">
+        var revapi;
+        jQuery(document).ready(function () {
+            revapi = jQuery('.tp-banner').revolution(
+                {
+                    delay: 10000,
+                    startwidth: 770,
+                    startheight: 467,
+                    autoHeight: "on",
+                    navigationType: "none",
+                    hideThumbs: 10,
+                    fullWidth: "on",
+                    fullScreen: "off",
+                    fullScreenOffsetContainer: ""
+                });
+        });</script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".tab-photos").owlCarousel({
+                autoPlay: true,
+                stopOnHover: true,
+                navigation: true,
+                goToFirstSpeed: 2000,
+                slideSpeed: 1500,
+                singleItem: true,
+                autoHeight: true,
+                pagination: false,
+                transitionStyle: "goDown"
+            });
+
+            $(".footer-deal").owlCarousel({
+                autoPlay: true,
+                stopOnHover: true,
+                goToFirstSpeed: 2000,
+                slideSpeed: 1500,
+                singleItem: true,
+                autoHeight: true,
+                transitionStyle: "goDown",
+                paginationNumbers: true
+            });
+
+            $("#most-solded").owlCarousel({
+                autoPlay: true,
+                stopOnHover: true,
+                navigation: true,
+                goToFirstSpeed: 2000,
+                slideSpeed: 1500,
+                singleItem: true,
+                autoHeight: true,
+                pagination: false,
+                transitionStyle: "goDown"
+            });
+
+        });</script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,104 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "ورود به سایت";
+
+    ViewBag.ErrorAlarm = ViewData["LoginError"];
+}
+
+<style>
+    @@font-face {
+        font-family: yekan;
+        src: url(../../wwwroot/SiteContect/fonts/yekan.ttf);
+    }
+</style>
+
+@{
+    if (!User.Identity.IsAuthenticated)
+    {
+        <section class="block remove-gap" style="margin-top:30px;font-family:yekan">
+            <div class="container">
+                <div class="row">
+
+                    @{
+                        if (ViewBag.ErrorAlarm != null)
+                        {
+                            <div class="col-md-4 col-md-offset-4" style="direction:rtl">
+                                <h5 style="font-family:yekan;color:#b61515;font-size:15px;font-weight:bold">@ViewBag.ErrorAlarm</h5>
+                            </div>
+                        }
+                    }
+
+                    <div class="col-md-4 col-md-offset-4" style="direction:rtl">
+                        <form id="account" method="post">
+                            <h4 style="font-family:yekan;font-size:16px;font-weight:bold">ورود به سایت</h4>
+                            <hr />
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Input.Email"></label>
+                                <input asp-for="Input.Email" class="form-control" />
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Input.Password"></label>
+                                <input asp-for="Input.Password" class="form-control" />
+                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label asp-for="Input.RememberMe">
+                                        <input asp-for="Input.RememberMe" />
+                                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-danger" style="font-size:14px;font-weight:bold">ورود</button>
+                            </div>
+                            <div class="form-group">
+                                <p style="font-size:15px">
+                                    <a id="forgot-password" asp-page="./ForgotPassword">گذرواژه را فراموش کرده اید</a>
+                                </p>
+                                <p style="font-size:15px">
+                                    <a href="/Identity/Account/Register">ثبت نام در سایت</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    }
+
+    else
+    {
+        <section class="block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="error-page">
+                            <img src="~/SiteContent/images/404.jpg" alt="" />
+                            <h2><i>خطا! </i> صفحه مورد نظر پیدا نشد!</h2>
+                            <h3>احتمالا مشکلی پیش آمده است! لطفا دوباره تلاش کنید.</h3>
+                            <h3><a style="color:#b61515" asp-controller="Home" asp-action="Index">بازگشت به صفحه اصلی</a></h3>
+
+                            <ul>
+                                <li><a asp-controller="Home" asp-action="Index" title=""><i class="fa fa-facebook"></i></a></li>
+                                <li><a asp-controller="Home" asp-action="Index" title=""><i class="fa fa-twitter"></i></a></li>
+                                <li><a asp-controller="Home" asp-action="Index" title=""><i class="fa fa-google-plus"></i></a></li>
+                                <li><a asp-controller="Home" asp-action="Index" title=""><i class="fa fa-linkedin"></i></a></li>
+                                <li><a asp-controller="Home" asp-action="Index" title=""><i class="fa fa-rss"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
